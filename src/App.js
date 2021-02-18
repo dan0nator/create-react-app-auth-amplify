@@ -8,19 +8,6 @@ import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
 class App extends Component {
-    get file() {
-        return useState();
-    }
-    get setFile() {
-        return useState();
-    }
-    get uploaded() {
-        return useState(false);
-    }
-    get setUploaded() {
-        return useState(false);
-    }
-
     render() {
         return (
             <div className="App">
@@ -29,6 +16,8 @@ class App extends Component {
                     <p>
                         <input type="file" onChange={(e) => setFile(e.target.files[0])} />
                         <button onClick={async () => {
+                            const [file, setFile ] = useState()
+                            const [uploaded, SetUploaded ] = useState(false)
                             const storageResult = await Storage.put('testfile.png', file, {
                                 level: 'public',
                                 type: 'image/png'
