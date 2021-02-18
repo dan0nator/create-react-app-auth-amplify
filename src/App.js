@@ -9,14 +9,12 @@ Amplify.configure(aws_exports);
 
 class App extends Component {
     render() {
-        const [file, setFile] = useState()
-        const [uploaded, setUploaded] = useState(false)
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>
-                        test
+                        Textract document application
           </p>
                     <a
                         className="App-link"
