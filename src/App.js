@@ -8,16 +8,16 @@ import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
 class App extends Component {
-    static get file() {
+    get file() {
         return useState();
     }
-    static get setFile() {
+    get setFile() {
         return useState();
     }
-    static get uploaded() {
+    get uploaded() {
         return useState(false);
     }
-    static get setUploaded() {
+    get setUploaded() {
         return useState(false);
     }
 
