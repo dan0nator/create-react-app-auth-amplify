@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator } from 'aws-amplify-react'
-import Amplify, { Auth } from 'aws-amplify';
+import Amplify, { Auth, Storage } from 'aws-amplify';
 import aws_exports from './aws-exports';
+
 Amplify.configure(aws_exports);
 
 class App extends Component {
+    const [file, setFile] = useState();
+    const [uploaded, setUploaded] = useState(false);
     render() {
         return (
             <div className="App">
