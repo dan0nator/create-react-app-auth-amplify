@@ -27,7 +27,15 @@ class App extends Component {
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>
-                        Textract document application
+                        <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+                        <button onClick={async () => {
+                            const storageResult = await Storage.put('testfile.png', file, {
+                                level: 'public',
+                                type: 'image/png'
+                            })
+                            setUploaded(true)
+                            console.log(storageResult);
+                        }}>Upload</button>
           </p>
                     <a
                         className="App-link"
