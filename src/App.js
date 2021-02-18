@@ -8,8 +8,19 @@ import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
 class App extends Component {
-    const [file, setFile] = useState();
-    const [uploaded, setUploaded] = useState(false);
+    static get file() {
+        return useState();
+    }
+    static get setFile() {
+        return useState();
+    }
+    static get uploaded() {
+        return useState(false);
+    }
+    static get setUploaded() {
+        return useState(false);
+    }
+
     render() {
         return (
             <div className="App">
