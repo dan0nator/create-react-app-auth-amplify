@@ -15,7 +15,7 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <p>
+
                         <button onClick={async () => {
                             const storageResult = await Storage.put('testfile.png', file, {
                                 level: 'public',
@@ -24,7 +24,7 @@ class App extends Component {
                             setUploaded(true)
                             console.log(storageResult);
                         }}>Upload</button>
-          </p>
+
                     <a
                         className="App-link"
                         href="https://reactjs.org"
