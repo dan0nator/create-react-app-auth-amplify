@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\amplify",
     "\\amplify\\backend",
     "\\amplify\\backend\\auth",
     "\\amplify\\backend\\auth\\cognitocf0c6096",
+    "\\amplify\\backend\\storage\\s3ec9fcd98",
     "\\src"
   ],
   "SelectedNode": "\\src\\App.js",
